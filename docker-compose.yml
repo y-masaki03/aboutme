@@ -1,0 +1,64 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    volumes:
+      - ./application/:/var/www/application
+    ports:
+      - 8000:8000
+      - 9000:9000
+      - 5173:5173
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    volumes:
+      - ./:/var/www
+    ports:
+      - ${WEB_PORT}:80
+    networks:
+      - app-network
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+      TZ: "Asia/Tokyo"
+    ports:
+      - ${DB_PORT}:5432
+    volumes:
+      - db:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 81:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    volumes:
+      - pgadmin:/var/lib/pgadmin4
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+volumes:
+  db:
+  pgadmin:
+
+networks:
+  app-network:
+    driver: bridge
