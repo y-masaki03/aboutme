@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container id="skill">
     <p class="text-h3 bg-light-green">{{ title }}</p>
     <v-sheet height="20vh" class="bg-red-lighten-4"></v-sheet>
   </v-container>
@@ -8,7 +8,7 @@
 <script>
 export default {
   data: () => ({
-    title: "SkillSet",
+    title: "Skill Set",
   }),
 };
 </script>
