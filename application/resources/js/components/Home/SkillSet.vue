@@ -1,56 +1,53 @@
 <template>
-  <div>
-    <v-container id="skill">
-      <v-card variant="text">
-        <template v-slot:title>
-          <span class="font-weight-black">{{ title }}</span>
-        </template>
-        <v-container class="pt-0">
-          <v-row>
-            <v-col cols="12" md="3" v-for="skill in skills" :key="skill">
-              <v-card variant="outlined">
-                <div class="ma-2">
-                  <div class="text-h6">{{ skill.title }}</div>
-                  <div
-                    class="text-caption"
-                    style="white-space: pre-wrap"
-                    v-text="skill.text"
-                  />
-                </div>
-                <div class="d-flex flex-row">
-                  <v-tooltip
-                    :text="list.name"
-                    v-for="list in skill.list"
-                    :key="list"
-                  >
-                    <template v-slot:activator="{ props }">
-                      <v-img
-                        class="ma-2"
-                        v-bind="props"
-                        max-width="35"
-                        :src="list.img"
-                      />
-                    </template>
-                  </v-tooltip>
-                </div>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-card>
-      <v-row justify="end" class="mr-1">
-        <v-btn
-          color="teal-lighten-1"
-          text="More Info"
-          class="text-none my-2"
-          prepend-icon="mdi-open-in-new"
-          size="small"
-          @click="goSkillSet()"
-        ></v-btn>
-      </v-row>
-    </v-container>
-    <v-divider class="border-opacity-50"></v-divider>
-  </div>
+  <v-container id="skill">
+    <v-card variant="text">
+      <template v-slot:title>
+        <span class="font-weight-black">{{ title }}</span>
+      </template>
+      <v-container class="pt-0">
+        <v-row>
+          <v-col cols="12" md="3" v-for="skill in skills" :key="skill">
+            <v-card variant="outlined">
+              <div class="ma-2">
+                <div class="text-h6">{{ skill.title }}</div>
+                <div
+                  class="text-caption"
+                  style="white-space: pre-wrap"
+                  v-text="skill.text"
+                />
+              </div>
+              <div class="d-flex flex-row">
+                <v-tooltip
+                  :text="list.name"
+                  v-for="list in skill.list"
+                  :key="list"
+                >
+                  <template v-slot:activator="{ props }">
+                    <v-img
+                      class="ma-2"
+                      v-bind="props"
+                      max-width="35"
+                      :src="list.img"
+                    />
+                  </template>
+                </v-tooltip>
+              </div>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-card>
+    <v-row justify="end" class="mr-1">
+      <v-btn
+        color="teal-lighten-1"
+        text="More Info"
+        class="text-none my-2"
+        prepend-icon="mdi-open-in-new"
+        size="small"
+        @click="goSkillSet()"
+      ></v-btn>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

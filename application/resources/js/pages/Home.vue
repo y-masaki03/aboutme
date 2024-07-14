@@ -2,9 +2,13 @@
   <v-container>
     <p class="text-h3 mb-1">{{ title }}</p>
     <Profile />
+    <v-divider class="border-opacity-50"></v-divider>
     <SkillSet />
+    <v-divider class="border-opacity-50"></v-divider>
     <Experience />
+    <v-divider class="border-opacity-50"></v-divider>
     <ReleaseNote />
+    <v-divider class="border-opacity-50"></v-divider>
   </v-container>
 </template>
 

@@ -1,21 +1,18 @@
 <template>
-  <div>
-    <v-container id="aboutme">
-      <v-card variant="text">
-        <template v-slot:title>
-          <span class="font-weight-black">{{ title }}</span>
-        </template>
-        <v-container class="pt-0">
-          <v-list-item v-for="item in profile" :key="item" :title="item.text">
-            <template v-slot:prepend>
-              <p style="width: 150px">{{ item.title }}</p>
-            </template>
-          </v-list-item>
-        </v-container>
-      </v-card>
-    </v-container>
-    <v-divider class="border-opacity-50"></v-divider>
-  </div>
+  <v-container id="aboutme">
+    <v-card variant="text">
+      <template v-slot:title>
+        <span class="font-weight-black">{{ title }}</span>
+      </template>
+      <v-container class="pt-0">
+        <v-list-item v-for="item in profile" :key="item" :title="item.text">
+          <template v-slot:prepend>
+            <p style="width: 150px">{{ item.title }}</p>
+          </template>
+        </v-list-item>
+      </v-container>
+    </v-card>
+  </v-container>
 </template>
 
 <script>
