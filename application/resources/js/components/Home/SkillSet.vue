@@ -19,8 +19,9 @@
               <div class="d-flex flex-row">
                 <v-tooltip
                   :text="list.name"
+                  location="bottom"
                   v-for="list in skill.list"
-                  :key="list"
+                  :key="list.name"
                 >
                   <template v-slot:activator="{ props }">
                     <v-img
@@ -79,7 +80,7 @@ export default {
       },
       {
         title: "Server side",
-        text: "laravelが一番得意です。OAuth認証、マルチテナント構築、APIの作成が好きです。\n※AWSはS3を主に使用したのでこちらに記載してます。",
+        text: "laravelが一番得意です。OAuth認証、マルチテナント構築、APIの作成が好きです。",
         list: [
           {
             img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
@@ -97,7 +98,7 @@ export default {
       },
       {
         title: "Database",
-        text: "SQL文好きです。コーディングはEloquentなどで操作しますが、viewテーブルの作成や、pgAdminなどを使用してのDBデータの確認が得意です。CSVを使用してのインポートが得意です。",
+        text: "実装ではEloquentなどで記述しますが、viewテーブルの作成やDB調査でSQLを記述するのが好きです。",
         list: [
           {
             img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
