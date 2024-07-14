@@ -26,7 +26,7 @@ export default {
       {title:"About Me", to:"#aboutme"},
       {title:"Skill Set", to:"#skill"},
       {title:"Experience", to:"#experience"},
-      {title:"News", to:"#news"},
+      {title:"Release Note", to:"#release_note"},
     ]
   }),
 };

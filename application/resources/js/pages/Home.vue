@@ -3,7 +3,7 @@
     <AboutMe />
     <SkillSet />
     <Experience />
-    <News />
+    <ReleaseNote />
   </v-container>
 </template>
 
@@ -11,14 +11,14 @@
 import AboutMe from "../components/Home/AboutMe.vue";
 import SkillSet from "../components/Home/SkillSet.vue";
 import Experience from "../components/Home/Experience.vue";
-import News from "../components/Home/News.vue";
+import ReleaseNote from "../components/Home/ReleaseNote.vue";
 
 export default {
   components: {
     AboutMe,
     SkillSet,
     Experience,
-    News,
+    ReleaseNote,
   },
 };
 </script>
