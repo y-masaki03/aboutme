@@ -23,11 +23,9 @@
 export default {
   data: () => ({
   links: [
-      {title:"Home", to:"#aboutme"},
       {title:"About Me", to:"#aboutme"},
       {title:"Skill Set", to:"#skill"},
       {title:"Experience", to:"#experience"},
-      {title:"Product", to:"#product"},
       {title:"News", to:"#news"},
     ]
   }),

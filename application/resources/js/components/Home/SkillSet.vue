@@ -1,40 +1,53 @@
 <template>
   <v-container id="skill">
-    <p class="text-h4 mb-1">{{ title }}</p>
-    <v-row>
-      <v-col cols="12" md="4" v-for="skill in skills" :key="skill">
-        <v-card variant="outlined" class="mx-auto" elevation="12">
-          <div class="ma-2">
-            <div class="text-h6">{{ skill.title }}</div>
-            <div class="text-caption">
-              {{ skill.text }}
-            </div>
-          </div>
-          <v-card-item v-for="list in skill.list" :key="list">
-            <v-row>
-              <v-col cols="2" class="pr-0">
-                <v-img max-width="35" :src="list.img" />
-              </v-col>
-              <v-col cols="10">
-                <v-progress-linear
-                  v-model="list.level"
-                  rounded
-                  height="25"
-                  color="light-green-darken-1"
-                  buffer-color="light-green-lighten-4"
-                  buffer-value="100"
-                  buffer-opacity="1"
-                >
-                  <template v-slot:default="{ value }">
-                    <p>{{ list.name + " " + Math.ceil(value) }}%</p>
-                  </template>
-                </v-progress-linear>
-              </v-col>
-            </v-row>
-          </v-card-item>
-        </v-card>
-      </v-col>
+   <p class="text-h4 mb-1 text-uppercase">{{ title }}</p>
+   <v-row>
+      <v-spacer></v-spacer>
+      <v-btn
+        color="teal-lighten-1"
+        text="More Info"
+        class="text-none my-2"
+        prepend-icon="mdi-open-in-new"
+        size="small"
+        @click="goSlillSet()"
+      ></v-btn>
     </v-row>
+    <v-container>
+      <v-row>
+        <v-col cols="12" md="4" v-for="skill in skills" :key="skill">
+          <v-card variant="outlined">
+            <div class="ma-2">
+              <div class="text-h6">{{ skill.title }}</div>
+              <div class="text-caption">
+                {{ skill.text }}
+              </div>
+            </div>
+            <v-card-item v-for="list in skill.list" :key="list">
+              <v-row>
+                <v-col cols="2" class="pr-0">
+                  <v-img class="mx-auto" max-width="35" :src="list.img" />
+                </v-col>
+                <v-col cols="10">
+                  <v-progress-linear
+                    v-model="list.level"
+                    rounded
+                    height="25"
+                    color="light-green-darken-1"
+                    buffer-color="light-green-lighten-4"
+                    buffer-value="100"
+                    buffer-opacity="1"
+                  >
+                    <template v-slot:default="{ value }">
+                      <p>{{ list.name + " " + Math.ceil(value) }}%</p>
+                    </template>
+                  </v-progress-linear>
+                </v-col>
+              </v-row>
+            </v-card-item>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-container>
 </template>
 
@@ -127,12 +140,12 @@ export default {
         text: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
         list: [
           {
-            img: "/storage/images/account-details.svg",
+            img: "/storage/images/account-details-outline.png",
             name: "要件定義",
             level: 80,
           },
           {
-            img: "/storage/images/book-open-variant.svg",
+            img: "/storage/images/book-open-variant-outline.png",
             name: "基本設計・詳細設計",
             level: 30,
           },
@@ -140,5 +153,10 @@ export default {
       },
     ],
   }),
+  methods: {
+    // goSlillSet() {
+    //   this.$router.push("/skillset");
+    // },
+  },
 };
 </script>
