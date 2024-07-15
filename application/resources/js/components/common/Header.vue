@@ -56,13 +56,6 @@ export default {
         icon: "mdi-home",
         title: "Home",
         path: "/",
-        // child: [
-        //   { title: "About Me", to: "#aboutme" },
-        //   { title: "Skill Set", to: "#skill" },
-        //   { title: "Experience", to: "#experience" },
-        //   { title: "Product", to: "#product" },
-        //   { title: "News", to: "#news" },
-        // ],
       },
       {
         icon: "mdi-star-check",
@@ -73,7 +66,6 @@ export default {
         icon: "mdi-monitor",
         title: "Experience",
         path: "/experience",
-        // child: [],
       },
     ],
     drawer: false,
