@@ -1,6 +1,7 @@
 <template>
   <v-container>
     <p class="text-h3 mb-1">{{ title }}</p>
+    <v-divider class="mt-4 border-opacity-50"></v-divider>
     <Profile />
     <v-divider class="border-opacity-50"></v-divider>
     <SkillSet />

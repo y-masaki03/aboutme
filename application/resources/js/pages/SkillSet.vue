@@ -127,6 +127,10 @@ export default {
             img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
             name: "PHP",
           },
+          {
+            img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg",
+            name: "WordPress",
+          },
         ],
       },
       {
