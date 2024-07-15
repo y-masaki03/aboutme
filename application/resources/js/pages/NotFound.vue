@@ -3,7 +3,7 @@
   <v-container>
     <v-row align-content="center" style="height: 500px">
       <v-col cols="12" md="12" align="center">
-        <p class="mb-2 text-h4 font-weight-bold">
+        <p class="mb-2 text-md-h4 text-h6 font-weight-bold">
           Sorry, the page you're looking for can't be found.
         </p>
         <p class="mb-2 text-subtitle-1">お探しのページが見つかりませんでした</p>

@@ -34,9 +34,12 @@
                 <div>
                   <p class="text-grey-darken-2">使用技術</p>
                   <span v-for="skill in project.skills" :key="skill">
-                    <v-chip variant="outlined" class="ma-1 text-caption">{{
-                      skill
-                    }}</v-chip>
+                    <v-chip
+                      size="small"
+                      variant="outlined"
+                      class="ma-1 text-caption"
+                      >{{ skill }}</v-chip
+                    >
                   </span>
                 </div>
               </v-card-text>
